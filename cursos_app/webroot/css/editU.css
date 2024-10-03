@@ -1,0 +1,77 @@
+.edit-user-card {
+    max-width: 600px;
+    margin: 50px auto; /* Centra la tarjeta horizontalmente y da un espacio arriba */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.page-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center; /* Centra el título dentro de la tarjeta */
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #005f73;
+    box-shadow: 0 0 5px rgba(0, 95, 115, 0.5);
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button-size {
+    flex: 1; /* Ocupa el mismo espacio para ambos botones */
+    max-width: 48%; /* Ajusta el ancho máximo para evitar que se superpongan */
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 5px; /* Espacio entre los botones */
+}
+
+.button-update {
+    background-color: #6b5b95;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-update:hover {
+    background-color: #5a4d7b;
+}
+
+.button-back {
+    background-color: #005f73;
+    color: white;
+    text-decoration: none;
+    line-height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-back:hover {
+    background-color: #004b5a;
+}

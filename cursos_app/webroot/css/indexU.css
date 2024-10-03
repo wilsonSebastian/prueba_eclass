@@ -1,0 +1,112 @@
+.user-actions-container {
+        display: flex;
+        align-items: center; /* Asegura que todos los elementos estén alineados verticalmente al centro */
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .search-form {
+        flex: 1;
+    }
+
+    .add-user-section, .bulk-upload-form {
+        flex: 1;
+    }
+
+    .add-user-button {
+        display: block;
+        background-color: #005f73;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .add-user-button:hover {
+        background-color: #004b5a;
+    }
+
+    .bulk-upload-form {
+        text-align: left;
+    }
+
+    .bulk-upload-button {
+        background-color: #005f73;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .bulk-upload-button:hover {
+        background-color: #004b5a;
+    }
+
+    .search-form fieldset {
+        border: none;
+    }
+
+    .search-form legend {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .users-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .users-table thead {
+        background-color: #005f73;
+        color: #ffffff;
+    }
+
+    .users-table th, .users-table td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .actions a {
+        margin-right: 10px;
+        color: #005f73;
+        text-decoration: none;
+    }
+
+    .actions a:hover {
+        text-decoration: underline;
+    }
+
+    .pagination {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .pagination ul {
+        display: inline-block;
+        padding-left: 0;
+        list-style: none;
+    }
+
+    .pagination li {
+        display: inline;
+        margin-right: 5px;
+    }
+
+    .pagination li a {
+        color: #005f73;
+        text-decoration: none;
+        padding: 5px 10px;
+        border: 1px solid #005f73;
+        border-radius: 5px;
+    }
+
+    .pagination li a:hover {
+        background-color: #004b5a;
+        color: white;
+    }

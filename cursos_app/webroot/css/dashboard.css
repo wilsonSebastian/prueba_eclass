@@ -1,0 +1,147 @@
+:root {
+    --sidebar-bg-color: #005f73; /* Color verde azulado */
+    --sidebar-text-color: #ffffff; /* Color blanco para el texto del sidebar */
+    --button-hover-color: #004b5a; /* Color más oscuro para el efecto hover */
+}
+
+.dashboard-container {
+    display: flex;
+    transition: all 0.5s;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0; /* Alineado arriba */
+    left: 0;
+    background-color: var(--sidebar-bg-color);
+    overflow-x: hidden;
+    transition: width 0.5s;
+    color: var(--sidebar-text-color);
+}
+
+.sidebar.collapsed {
+    width: 0;
+    overflow: hidden; /* Oculta el contenido del sidebar al colapsar */
+}
+
+.toggle-sidebar-btn {
+    background-color: var(--sidebar-bg-color);
+    border: none;
+    color: var(--sidebar-text-color);
+    font-size: 24px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 0; /* Alineado arriba */
+    left: 0; /* Alineado completamente a la izquierda */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+}
+
+.main-content {
+    flex-grow: 1;
+    margin-left: 260px;
+    padding: 20px;
+    transition: margin-left 0.5s;
+}
+
+.sidebar.collapsed ~ .main-content {
+    margin-left: 60px; /* Ajusta el margen cuando el sidebar está colapsado */
+}
+
+.menu {
+    margin-top: 70px; /* Ajusta la separación para que el menú quede justo debajo del botón toggleSidebar */
+    padding-left: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--sidebar-text-color);
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.logout-button {
+    color: var(--sidebar-text-color);
+    text-decoration: none;
+    padding: 15px;
+    background-color: var(--sidebar-bg-color);
+    border: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+}
+
+.logout-button:hover {
+    background-color: var(--button-hover-color); /* Un tono más oscuro para el efecto hover */
+}
+.user-section {
+    padding: 20px;
+}
+
+.course-filter-form {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.course-filter-form legend {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.course-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start; /* Puedes usar center o space-between según el diseño */
+}
+
+.course-card {
+    flex: 1 1 calc(25% - 20px); /* Ajusta para que haya cuatro tarjetas por fila */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px; /* Establece una altura mínima para alinear los botones */
+}
+
+.course-card h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    margin: 5px 0;
+}
+
+.course-card .show-coursemates {
+    align-self: center; /* Alinea el botón al centro horizontal */
+    background-color: #005f73;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.course-card .show-coursemates:hover {
+    background-color: #004b5a;
+}

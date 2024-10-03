@@ -1,0 +1,52 @@
+
+    .user-details-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .user-info {
+        margin-bottom: 20px;
+        font-size: 18px;
+        color: #333;
+    }
+
+    .user-info p {
+        margin-bottom: 10px;
+    }
+
+    .buttons-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .edit-button, .back-button {
+        display: inline-block;
+        text-align: center;
+        padding: 12px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .edit-button {
+        background-color: #005f73;
+        color: white;
+    }
+
+    .edit-button:hover {
+        background-color: #004b5a;
+    }
+
+    .back-button {
+        background-color: #0a9396;
+        color: white;
+    }
+
+    .back-button:hover {
+        background-color: #007f83;
+    }

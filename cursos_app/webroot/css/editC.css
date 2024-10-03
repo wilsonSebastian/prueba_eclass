@@ -1,0 +1,75 @@
+.edit-course-container {
+        max-width: 800px;
+        margin: auto;
+        padding: 40px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .edit-course-header {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #005f73;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .form-group label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 8px;
+        color: #333;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        height: 150px;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+
+    .button {
+        padding: 12px 25px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .button.update-button {
+        background-color: #ffbf00; /* Color dorado */
+    }
+
+    .button.update-button:hover {
+        background-color: #d99e00; /* Un poco más oscuro para efecto hover */
+    }
+
+    .button.back-button {
+        background-color: #005f73;
+    }
+
+    .button.back-button:hover {
+        background-color: #004b5a;
+    }

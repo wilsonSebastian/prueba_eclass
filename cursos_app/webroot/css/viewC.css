@@ -1,0 +1,93 @@
+ .course-details-container {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .course-card {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .course-header {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #005f73;
+        padding-bottom: 10px;
+    }
+
+    .course-info {
+        margin: 15px 0;
+        line-height: 1.6;
+    }
+
+    .students-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .students-list {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+    }
+
+    .students-header {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #005f73;
+    }
+
+    .student-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .student-info {
+        font-size: 16px;
+        color: #333;
+    }
+
+    .student-button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .student-button:hover {
+        background-color: #0056b3;
+    }
+
+    .student-list-title {
+        margin-bottom: 15px;
+    }
+
+    .button-container {
+        margin-top: 20px;
+    }
+
+    .button-container .button {
+        background-color: #005f73;
+        color: #ffffff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+    .button-container .button:hover {
+        background-color: #004b5a;
+    }
