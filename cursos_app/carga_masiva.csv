@@ -1,0 +1,6 @@
+username,email,role,status,password
+johnsmith,johnsmith@example.com,user,active,Password123!
+maryjane,maryjane@example.com,admin,active,Password456!
+peterparker,peterparker@example.com,user,inactive,Password789!
+brucewayne,brucewayne@example.com,user,active,Password101!
+tonystark,tonystark@example.com,admin,active,Password202!
