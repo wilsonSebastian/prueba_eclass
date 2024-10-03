@@ -263,19 +263,16 @@ return [
             'className' => Connection::class,
             'driver' => Mysql::class,
             'persistent' => false,
-            'host' => 'localhost',
+            'host' => env('DATABASE_HOST', 'localhost'),
             /*
              * CakePHP will use the default DB port based on the driver selected
              * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
              * the following line and set the port accordingly
              */
             //'port' => 'non_standard_port_number',
-            /*
-             * It is recommended to set these options through your environment or app_local.php
-             */
-            'username' => 'root',
-            'password' => '',
-            'database' => 'eclass',
+            'username' => env('DATABASE_USERNAME', 'root'),
+            'password' => env('DATABASE_PASSWORD', ''),
+            'database' => env('DATABASE_NAME', 'eclass'),
             /*
              * You do not need to set this flag to use full utf-8 encoding (internal default since CakePHP 3.6).
              */
@@ -306,28 +303,8 @@ return [
 
             'url' => env('DATABASE_URL', null),
         ],
-
-        /*
-         * The test connection is used during the test suite.
-         */
-        /*'test' => [
-            'className' => Connection::class,
-            'driver' => Mysql::class,
-            'persistent' => false,
-            'host' => 'localhost',
-            //'port' => 'non_standard_port_number',
-            'username' => 'my_app',
-            'password' => 'secret',
-            'database' => 'test_myapp',
-            //'encoding' => 'utf8mb4',
-            'timezone' => 'UTC',
-            'cacheMetadata' => true,
-            'quoteIdentifiers' => false,
-            'log' => false,
-            //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
-            'url' => env('DATABASE_TEST_URL', null),
-        ],*/
     ],
+
 
     /*
      * Configures logging options
