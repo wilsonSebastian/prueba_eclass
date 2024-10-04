@@ -1,0 +1,50 @@
+Usuarios de prueba:
+
+Administrador
+Usuario: admin
+Contraseña: admin123
+
+Estudiante
+Usuario: loreto
+Contraseña: loreto123
+
+Usuario inactivo
+Usuario: inactivo
+Contraseña: inactivo123
+
+Funcionalidades administrador:
+
+-Funcionalidad carga masiva:
+ El administrador cuenta con la opción de realizar cargas masivas de ussuarios, así que el archivo llamado carga_masiva.csv contiene 5 usuarios para que pueda ser probada la función
+-CRUD de cursos:
+ El administrador puede crear, visualizar y modificar los cursos.
+-CRUD de usuarios:
+ El administrador puede crear, visualizar y modificar los usuarios.
+-Buscador:
+ Se añadió un buscador en cada vista para para que el administrador pueda realizar busqueda de usuarios, cursos, la busqueda se realiza de forma asincronia para evitar regargas.
+-Barra lateral:
+ Se añadió una barra lateral con un menú personalizado para que el administrador pueda acceder a las distintas vistas.
+-Matricula de usuarios:
+ El administrador puede matricular usuarios en los distintos cursos, para poder hacerlo tiene que ingresar a ver el curso y en esa vista se desplegará un listado de usuarios matirculados y no matriculados en el curso.
+
+Funcionalidades usuario:
+-Ver cursos:
+ El usuario puede ver los cursos en los que se encuentra matiruclado, información del curso y compañeros de curso.
+-Buscador:
+ El usuario puede realizar una busqueda en especifico de cursos.
+
+Seguridad:
+Se creo un middleware personalizado para evitar el ingreso a sitios no autorizados mediante url.
+Validaciones de rol usuarios para ser redirigidos a las vistas permitidas.
+Se añadieron tokens a las tablas cursos y usuarios para poder proteger las url sensibles.
+
+Que falta:
+
+Recuperación de contraseña para usuario:
+Debido a que no cuento con un servidor de correos no puedo dejar habilitado el metodo pero quedó funcional ya que fue probado con un correo gmail.
+
+Buscador:
+Buscador de cursos no se actualiza de forma asincronica (usuario).
+Buscador de ususarios dentro del curso (administrador).
+
+

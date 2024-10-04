@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `token` (`token`)
-) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+)
 
 -- --------------------------------------------------------
 
@@ -53,8 +53,7 @@ CREATE TABLE IF NOT EXISTS `courses` (
   `modified` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `token` (`token`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
+)
 -- --------------------------------------------------------
 
 -- Creación de tabla para `users_courses`
@@ -66,8 +65,7 @@ CREATE TABLE IF NOT EXISTS `users_courses` (
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   KEY `course_id` (`course_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
+)
 -- --------------------------------------------------------
 
 -- Carga de datos para la tabla `users`
@@ -76,7 +74,7 @@ INSERT INTO `users` (`id`, `username`, `password`, `email`, `role`, `status`, `c
 (12, 'admin', '$2y$10$U6o0dOC5wjWk8HzjKDNHZ.PFbP7GJHerKnTKQzVYEL0ORwZIEOBtq', 'wilarevalo4@gmail.com', 'admin', 'active', '2024-10-02 02:43:17', '2024-10-03 16:14:15', 'd3481f457494dec3018d188984159635c7f8864e759f3ef190d95cbe9d5e9066'),
 (13, 'Alonso', '$2y$10$OpQzmawsXC574YgHibWaqOCeLlB2vlcOf7/eqmVRzwyCFKrH65E/W', 'alonso@alonso.cl', 'user', 'active', '2024-10-02 15:39:59', '2024-10-02 15:39:59', 'ea1c20d0a27f4115e27637bebf654e98cafe0c730eaaee251cf6e93d035ce66e'),
 (14, 'Matías', '$2y$10$h5FHJkU9RlRw3iGduq0sqO/yVLAlywPe6L2msv3VL0jrxqHarGICq', 'mati@mati.cl', 'user', 'active', '2024-10-02 15:40:18', '2024-10-02 15:40:18', 'bb113bc3ca4b81686e7c73c388a649158ee47528852517701d2da7d19f2aa13d'),
-(25, 'inactivo', '$2y$10$4vpKFy4yv/qgSZLpXt5ICugpqIc6mfqTqe0kLPf/.4ypG/RdZMCPu', 'inactivo@inactivo.cl', 'user', 'active', '2024-10-03 13:52:22', '2024-10-03 13:53:12', '7ec6ce11f6e41d8b64041181a1e4f81ab1535a79bf768848e8223e9c8619965d');
+(25, 'inactivo', '$2y$10$4vpKFy4yv/qgSZLpXt5ICugpqIc6mfqTqe0kLPf/.4ypG/RdZMCPu', 'inactivo@inactivo.cl', 'user', 'inactive', '2024-10-03 13:52:22', '2024-10-03 13:53:12', '7ec6ce11f6e41d8b64041181a1e4f81ab1535a79bf768848e8223e9c8619965d');
 
 -- Carga de datos para la tabla `courses`
 INSERT INTO `courses` (`id`, `token`, `name`, `description`, `start_date`, `end_date`, `created`, `modified`) VALUES
