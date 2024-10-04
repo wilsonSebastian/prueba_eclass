@@ -1,4 +1,5 @@
 <?php
+
 namespace App\CustomMiddleware;
 
 use Cake\Http\Response;

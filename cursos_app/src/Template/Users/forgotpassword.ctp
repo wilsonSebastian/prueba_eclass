@@ -4,7 +4,7 @@
     <div class="card">
         <h1>Recuperar Contraseña</h1>
         <p>Por favor, ingrese su dirección de correo electrónico para enviarle un enlace de restablecimiento de contraseña.</p>
-        
+
         <div id="notification" class="notification" style="display: none;">
             No hay servidor de correos configurado para poder hacer funcionar este apartado, pero la lógica de funcionamiento se encuentra completa en el controlador correspondiente.
         </div>

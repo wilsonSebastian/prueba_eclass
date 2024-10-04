@@ -8,7 +8,7 @@
         <button class="toggle-sidebar-btn" id="toggleSidebar">
             &#60;&#62;
         </button>
-        
+
         <div class="menu">
             <ul>
                 <li><a href="<?= $this->Url->build(['controller' => 'Users', 'action' => 'index']); ?>">Ver todos los usuarios</a></li>
@@ -17,7 +17,7 @@
         </div>
 
         <a href="<?= $this->Url->build(['controller' => 'Users', 'action' => 'logout']) ?>" class="logout-button">
-           Cerrar sesión
+            Cerrar sesión
         </a>
     </div>
 
@@ -50,7 +50,7 @@
                 <h3>Realizar carga masiva</h3>
                 <?= $this->Form->create(null, ['type' => 'file', 'url' => ['controller' => 'Users', 'action' => 'bulkUpload'], 'class' => 'form-inline']) ?>
                 <?= $this->Form->control('file', [
-                    'type' => 'file', 
+                    'type' => 'file',
                     'label' => false,
                     'class' => 'bulk-upload-input'
                 ]) ?>
@@ -73,17 +73,17 @@
                 </thead>
                 <tbody>
                     <?php foreach ($users as $user): ?>
-                    <tr>
-                        <td><?= h($user->username) ?></td>
-                        <td><?= h($user->email) ?></td>
-                        <td><?= h($user->role) ?></td>
-                        <td><?= h($user->status) ?></td>
-                        <td class="actions">
-                            <?= $this->Html->link('Ver', ['action' => 'view', $user->token]) ?>
-                            <?= $this->Html->link('Editar', ['action' => 'edit', $user->token]) ?>
-                            <?= $this->Form->postLink('Eliminar', ['action' => 'delete', $user->token], ['confirm' => '¿Estás seguro?']) ?>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td><?= h($user->username) ?></td>
+                            <td><?= h($user->email) ?></td>
+                            <td><?= h($user->role) ?></td>
+                            <td><?= h($user->status) ?></td>
+                            <td class="actions">
+                                <?= $this->Html->link('Ver', ['action' => 'view', $user->token]) ?>
+                                <?= $this->Html->link('Editar', ['action' => 'edit', $user->token]) ?>
+                                <?= $this->Form->postLink('Eliminar', ['action' => 'delete', $user->token], ['confirm' => '¿Estás seguro?']) ?>
+                            </td>
+                        </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
@@ -103,11 +103,11 @@
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         const sidebar = document.getElementById('sidebar');
         const toggleBtn = document.getElementById('toggleSidebar');
 
-        toggleBtn.addEventListener('click', function () {
+        toggleBtn.addEventListener('click', function() {
             if (sidebar.classList.contains('collapsed')) {
                 sidebar.classList.remove('collapsed');
                 sidebar.style.width = '250px';
@@ -129,19 +129,18 @@
 
                 // Realizar la petición AJAX
                 fetch(`<?= $this->Url->build(['controller' => 'Users', 'action' => 'index']) ?>?search=${searchValue}`, {
-                    method: 'GET',
-                    headers: {
-                        'X-Requested-With': 'XMLHttpRequest'
-                    }
-                })
-                .then(response => response.text())
-                .then(html => {
-                    // Actualizar la tabla de usuarios con la respuesta obtenida
-                    document.getElementById('userTable').innerHTML = html;
-                })
-                .catch(error => console.error('Error:', error));
+                        method: 'GET',
+                        headers: {
+                            'X-Requested-With': 'XMLHttpRequest'
+                        }
+                    })
+                    .then(response => response.text())
+                    .then(html => {
+                        // Actualizar la tabla de usuarios con la respuesta obtenida
+                        document.getElementById('userTable').innerHTML = html;
+                    })
+                    .catch(error => console.error('Error:', error));
             }, 500); // Esperar 500ms después de que el usuario deja de escribir
         });
     });
 </script>
-

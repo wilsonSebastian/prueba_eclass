@@ -4,7 +4,7 @@
 <ul>
     <?php foreach ($selectedCourse->users as $student): ?>
         <li>
-            <?= h($student->username) ?> - 
+            <?= h($student->username) ?> -
             <?= $this->Html->link('Eliminar del Curso', ['action' => 'removeStudent', $selectedCourse->id, $student->id], ['confirm' => '¿Estás seguro de que deseas eliminar a este estudiante?']) ?>
         </li>
     <?php endforeach; ?>
@@ -14,7 +14,7 @@
 <ul>
     <?php foreach ($studentsNotEnrolled as $student): ?>
         <li>
-            <?= h($student->username) ?> - 
+            <?= h($student->username) ?> -
             <?= $this->Html->link('Inscribir', ['action' => 'enrollStudent', $selectedCourse->id, $student->id]) ?>
         </li>
     <?php endforeach; ?>

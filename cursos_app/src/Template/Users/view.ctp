@@ -14,5 +14,3 @@
         <p><?= $this->Html->link('Volver', ['action' => 'index'], ['class' => 'button back-button']) ?></p>
     </div>
 </div>
-
-

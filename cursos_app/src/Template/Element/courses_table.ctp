@@ -10,16 +10,16 @@
     <tbody>
         <?php if (!empty($courses)): ?>
             <?php foreach ($courses as $course): ?>
-            <tr>
-                <td><?= h($course->name) ?></td>
-                <td><?= h($course->start_date->format('m/d/y')) ?></td>
-                <td><?= h($course->end_date->format('m/d/y')) ?></td>
-                <td>
-                    <?= $this->Html->link('Ver', ['action' => 'view', $course->token]) ?>
-                    <?= $this->Html->link('Editar', ['action' => 'edit', $course->token]) ?>
-                    <?= $this->Form->postLink('Eliminar', ['action' => 'delete', $course->token], ['confirm' => 'Are you sure?']) ?>
-                </td>
-            </tr>
+                <tr>
+                    <td><?= h($course->name) ?></td>
+                    <td><?= h($course->start_date->format('m/d/y')) ?></td>
+                    <td><?= h($course->end_date->format('m/d/y')) ?></td>
+                    <td>
+                        <?= $this->Html->link('Ver', ['action' => 'view', $course->token]) ?>
+                        <?= $this->Html->link('Editar', ['action' => 'edit', $course->token]) ?>
+                        <?= $this->Form->postLink('Eliminar', ['action' => 'delete', $course->token], ['confirm' => 'Are you sure?']) ?>
+                    </td>
+                </tr>
             <?php endforeach; ?>
         <?php else: ?>
             <tr>

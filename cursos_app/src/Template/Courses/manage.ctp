@@ -60,17 +60,17 @@
 
             // Realizar la petición AJAX
             fetch(`<?= $this->Url->build(['controller' => 'Courses', 'action' => 'manage']) ?>?search=${searchValue}`, {
-                method: 'GET',
-                headers: {
-                    'X-Requested-With': 'XMLHttpRequest'
-                }
-            })
-            .then(response => response.text())
-            .then(html => {
-                // Actualizar el contenedor de la tabla de cursos con la respuesta obtenida
-                document.getElementById('courseTableContainer').innerHTML = html;
-            })
-            .catch(error => console.error('Error:', error));
+                    method: 'GET',
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                    }
+                })
+                .then(response => response.text())
+                .then(html => {
+                    // Actualizar el contenedor de la tabla de cursos con la respuesta obtenida
+                    document.getElementById('courseTableContainer').innerHTML = html;
+                })
+                .catch(error => console.error('Error:', error));
         }, 500); // Esperar 500ms después de que el usuario deja de escribir
     });
 </script>

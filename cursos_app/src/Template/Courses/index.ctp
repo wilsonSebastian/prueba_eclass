@@ -15,7 +15,7 @@
         </div>
 
         <a href="<?= $this->Url->build(['controller' => 'Users', 'action' => 'logout']) ?>" class="logout-button">
-           Cerrar sesión
+            Cerrar sesión
         </a>
     </div>
 
@@ -46,11 +46,11 @@
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         const sidebar = document.getElementById('sidebar');
         const toggleBtn = document.getElementById('toggleSidebar');
 
-        toggleBtn.addEventListener('click', function () {
+        toggleBtn.addEventListener('click', function() {
             if (sidebar.classList.contains('collapsed')) {
                 sidebar.classList.remove('collapsed');
                 sidebar.style.width = '250px';
@@ -75,17 +75,17 @@
 
                 // Realizar la petición AJAX
                 fetch(url, {
-                    method: 'GET',
-                    headers: {
-                        'X-Requested-With': 'XMLHttpRequest'
-                    }
-                })
-                .then(response => response.text())
-                .then(html => {
-                    // Actualizar la tabla de cursos con la respuesta obtenida
-                    document.getElementById('courseTable').innerHTML = html;
-                })
-                .catch(error => console.error('Error:', error));
+                        method: 'GET',
+                        headers: {
+                            'X-Requested-With': 'XMLHttpRequest'
+                        }
+                    })
+                    .then(response => response.text())
+                    .then(html => {
+                        // Actualizar la tabla de cursos con la respuesta obtenida
+                        document.getElementById('courseTable').innerHTML = html;
+                    })
+                    .catch(error => console.error('Error:', error));
             }, 500); // Esperar 500ms después de que el usuario deja de escribir
         });
     });

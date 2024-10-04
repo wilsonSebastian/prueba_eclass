@@ -3,7 +3,7 @@
         <button class="toggle-sidebar-btn" id="toggleSidebar">
             &lt;&gt;
         </button>
-        
+
 
         <div class="menu">
             <ul>
@@ -15,6 +15,6 @@
         </div>
 
         <a href="<?= $this->Url->build(['controller' => 'Users', 'action' => 'logout']) ?>" class="logout-button">
-           Cerrar sesión
+            Cerrar sesión
         </a>
     </div>

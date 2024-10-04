@@ -7,7 +7,7 @@
             <ul>
                 <?php foreach ($course->users as $user): ?>
                     <li>
-                        <?= h($user->username) ?> 
+                        <?= h($user->username) ?>
                         (<?= $this->Html->link('Eliminar', ['action' => 'removeStudent', $course->id, $user->id]) ?>)
                     </li>
                 <?php endforeach; ?>

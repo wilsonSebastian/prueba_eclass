@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Model\Table;
 
 use Cake\ORM\Table;
@@ -41,7 +42,7 @@ class UsersTable extends Table
             ->notEmptyString('username', 'El nombre de usuario es obligatorio')
             ->minLength('username', 3, 'El nombre de usuario debe tener al menos 3 caracteres.')
             ->maxLength('username', 50, 'El nombre de usuario no puede tener más de 50 caracteres.')
-            
+
             ->notEmptyString('password', 'La contraseña es obligatoria')
             ->minLength('password', 6, 'La contraseña debe tener al menos 6 caracteres.')
 
